@@ -5,7 +5,7 @@ StudyNotion is a full-stack EdTech web application with an ML-powered course rec
 ## Tech Stack
 - Frontend: React (Vite), Redux Toolkit, Tailwind CSS
 - Backend: Node.js, Express, MongoDB
-- ML Service: Python, FastAPI, Collaborative Filtering
+- ML Service: Python, FastAPI, Collaborative Filtering,Content filtering 
 - Payments: Razorpay
 - Deployment: Vercel + Render
 
