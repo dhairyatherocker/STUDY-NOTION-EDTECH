@@ -1,0 +1,20 @@
+{
+  "name": "study-notion-mega",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently -n \"frontend,backend,ml\" -c \"bgBlue,bgYellow,bgGreen\" \"npm run dev --prefix frontend\" \"npm run dev --prefix serverbackend\" \"cd ml-service && Scripts\\\\python.exe -m uvicorn export_recs:app --reload\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "crypto-random-string": "^5.0.0"
+  },
+  "devDependencies": {
+    "baseline-browser-mapping": "^2.9.18",
+    "concurrently": "^9.2.1"
+  }
+}

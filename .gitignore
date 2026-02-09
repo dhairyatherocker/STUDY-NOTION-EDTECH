@@ -1,0 +1,22 @@
+# node
+node_modules/
+dist/
+build/
+
+# env
+.env
+.env.*
+
+# python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# ML junk
+ml-service/Lib/
+ml-service/Scripts/
+ml-service/Include/
+
+# OS
+.DS_Store
