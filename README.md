@@ -9,4 +9,10 @@ StudyNotion is a full-stack EdTech web application with an ML-powered course rec
 - Payments: Razorpay
 - Deployment: Vercel + Render
 
-## Project Structure
+
+## Features
+- User authentication & authorization
+- Course creation & enrollment
+- Payments via Razorpay
+- ML-based personalized course recommendations
+
