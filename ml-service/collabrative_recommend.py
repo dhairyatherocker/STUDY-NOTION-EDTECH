@@ -1,12 +1,16 @@
 import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
+import os 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-courses=pd.read_csv(r'C:\hp\STUDY-NOTION-EDTECH\ml-service\data.csv')
-user=pd.read_csv(r'C:\hp\STUDY-NOTION-EDTECH\ml-service\user-activity.csv')
+COURSE_PATH = os.path.join(BASE_DIR, "data.csv")
+USER_PATH = os.path.join(BASE_DIR, "user-activity.csv")
+courses=pd.read_csv(COURSE_PATH)
+user=pd.read_csv(USER_PATH)
 
-print("courses columns\n",courses.columns)
-print("\nuser columns\n",user.columns)
+# print("courses columns\n",courses.columns)
+# print("\nuser columns\n",user.columns)
 
 user['userId']=user['id']
 user.drop(columns=['id'],inplace=True)
@@ -14,11 +18,11 @@ user.drop(columns=['id'],inplace=True)
 user['Rating']=user['rating']
 user.drop(columns=['rating'],inplace=True)
 
-print(user.columns)
+# print(user.columns)
 user['Rating'].fillna(1,inplace=True)
 matrix=user.pivot_table(index='courseId',columns='userId',values='Rating')
 matrix.fillna(0,inplace=True)
-print(matrix)
+# print(matrix)
 
 mt=cosine_similarity(matrix)
 

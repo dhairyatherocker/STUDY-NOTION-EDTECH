@@ -6,19 +6,23 @@ import nltk
 from nltk.stem.porter import PorterStemmer
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-
-course=pd.read_csv(r'C:\hp\STUDY-NOTION-EDTECH\ml-service\data.csv')
+import os
+import pandas as pd
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_PATH = os.path.join(BASE_DIR, "data.csv")
+USER_PATH = os.path.join(BASE_DIR, "user-activity.csv")
+course=pd.read_csv(DATA_PATH)
 print(course.head(5))
 
 # course['fullname']=course['firstname']
 
-user=pd.read_csv(r'C:\hp\STUDY-NOTION-EDTECH\ml-service\user-activity.csv')
+user=pd.read_csv(USER_PATH)
 
 
 user['fullname']=user['firstname']+" "+user['lastname']
 
 user.drop(columns=['firstname','lastname','price'],inplace=True)
-print(user.head())
+# print(user.head())
 course['courseId']=course['id']
 course.drop(columns=['id'],inplace=True)
 
@@ -28,22 +32,22 @@ print(df.columns)
 print("user shape is",user.shape)
 print("course shape is",course.shape)
 print("df shape is ",df.shape)
-df.to_csv(r"C:\hp\STUDY-NOTION-EDTECH\ml-service\combined.csv", index=False)
+# df.to_csv(r"C:\hp\STUDY-NOTION-EDTECH\ml-service\combined.csv", index=False)
 
-df=pd.read_csv(r'C:\hp\STUDY-NOTION-EDTECH\ml-service\combined.csv')
+# df=pd.read_csv(r'C:\hp\STUDY-NOTION-EDTECH\ml-service\combined.csv')
 # print(course.columns)
 
 
 
 # content based filtering preprocessing
 
-courses=pd.read_csv(r'C:\hp\STUDY-NOTION-EDTECH\ml-service\data.csv')
+courses=pd.read_csv(DATA_PATH)
 
 # print(courses.head(1))
-print("this is the tags",df.iloc[0]['tags'],end='\n\n')
+# print("this is the tags",df.iloc[0]['tags'],end='\n\n')
 courses['courseId']=courses['id']
 courses.drop(columns=['id'],inplace=True)
-print(courses.columns)
+# print(courses.columns)
 courses['tags'] = courses['tags'].apply(literal_eval)
 
 # def process(obj):
@@ -79,10 +83,10 @@ courses['category']=courses['category'].apply(convert)
 courses['language']=courses['language'].apply(convert2)
 courses['description']=courses['description'].apply(convert2)
 
-print(course.iloc[0]['topic'])
+# print(course.iloc[0]['topic'])
 # courses[]
 
-print(courses.iloc[5].description)
+# print(courses.iloc[5].description)
 
 def process2(obj):
     l=[]
@@ -95,11 +99,11 @@ def process2(obj):
 
 courses['full_info']=courses['tags']+courses['language']+courses['description']+courses['category']+courses['topic']+courses['teacher']
 
-print(courses.iloc[0]['full_info'])
+# print(courses.iloc[0]['full_info'])
 
 courses['full_info']=courses['full_info'].apply(lambda x:[i.replace(" ","") for i in x])
 
-print("course full info\n",courses.iloc[0].full_info)
+# print("course full info\n",courses.iloc[0].full_info)
 
 new_df=courses[['courseId','topic','full_info']]
 
@@ -110,7 +114,7 @@ new_df['full_info']=new_df['full_info'].apply(lambda x:" ".join(x))
 
 
 new_df['full_info']=new_df['full_info'].apply(lambda x:x.lower())
-print("this is new full info",new_df.iloc[0].full_info)
+# print("this is new full info",new_df.iloc[0].full_info)
 ps=PorterStemmer()
 
 
@@ -126,15 +130,15 @@ cv=CountVectorizer(max_features=100,stop_words='english')
 
 vectors=cv.fit_transform(new_df['full_info']).toarray()
 
-print(vectors)
+# print(vectors)
 
-print(cv.get_feature_names_out())
+# print(cv.get_feature_names_out())
 
 similarity=cosine_similarity(vectors)
 
 
 
-print(new_df[new_df['courseId']=='681101011eaf7f9e39eacd4d'].index[0])
+# print(new_df[new_df['courseId']=='681101011eaf7f9e39eacd4d'].index[0])
 # print("similariyt for ptricular index",sorted(list(enumerate(similarity[new_df[new_df['courseId']=='681101011eaf7f9e39eacd4d'].index[0]])),reverse=True))
 def recommendcourse(Id):
     course_index=new_df[new_df['courseId']==Id].index[0]
