@@ -22,7 +22,7 @@ markdown-it-py==4.0.0
 MarkupSafe==3.0.3
 mdurl==0.1.2
 nltk==3.9.2
-numpy==2.10.13
+numpy==1.26.4
 pandas==2.3.3
 pydantic==2.12.5
 pydantic-extra-types==2.11.0
@@ -55,4 +55,5 @@ urllib3==2.5.0
 uvicorn==0.40.0
 watchfiles==1.1.1
 websockets==16.0
+
 
