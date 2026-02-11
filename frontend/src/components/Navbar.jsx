@@ -35,13 +35,13 @@ const [ink,setink]=useState([]);
 async function fetchlinks(){
   try{
 const result =await apiconnector("GET",api.getallcategories);
-// console.log("fetching sublinks",result);
-// setlinks(result);
+console.log("fetching sublinks",result);
+// setink(result);
 const response=result.data.getallcategory;
-// console.log("respone ink",response);
+console.log("respone ink",response);
   setink(response);
-// console.log(result.data.getallcategory);
-// console.log("inks",ink);
+console.log(result.data.getallcategory);
+console.log("inks",ink);
   }
   catch(error){
 console.log("error in catalog",error)
@@ -92,8 +92,8 @@ NavbarLinks.map((ele,index)=>{
                   ink.map((ele,index)=>{
                     return (
 
-                        <Link to={`/categorypage/${ele.name}/${ele._id}`}>
-                           <div onClick className="flex w-[230px] mx-auto pl-[10px] rounded-md items-center  h-[50px]  text-[#161D29] hover:bg-[#c5c8cc] hover:text-richblack-25 font-[400] text-[16px] ">{ele.name}</div>
+                        <Link to={`/categorypage/${ele?.name}/${ele?._id}`}>
+                           <div onClick className="flex w-[230px] mx-auto pl-[10px] rounded-md items-center  h-[50px]  text-[#161D29] hover:bg-[#c5c8cc] hover:text-richblack-25 font-[400] text-[16px] ">{ele?.name}</div>
                         </Link>
 
                   )})
