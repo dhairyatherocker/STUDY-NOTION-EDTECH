@@ -2,7 +2,7 @@ import { useState } from "react";
 import {setLoading,setToken} from "../slices/authslice.jsx"
 import {resetcart} from "../slices/cartslice.jsx"
 import {toast} from "react-hot-toast"
-import { setStep,setCourse } from "../slices/courseslice.jsx";
+import { setStep,setCourse } from "../slices/Courseslice.jsx";
 import {auth,profile,course} from "./apis.jsx"
 import {apiconnector} from "./apiconnector.jsx"
 // import {setuser} from "../slices/profileslice.jsx"
