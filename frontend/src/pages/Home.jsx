@@ -14,7 +14,7 @@ import Logo1 from "../assets/TimeLineLogo/Logo1.svg";
 import Logo2 from "../assets/TimeLineLogo/Logo2.svg";
 import Logo3 from "../assets/TimeLineLogo/Logo3.svg";
 import Logo4 from "../assets/TimeLineLogo/Logo4.svg";
-import TimeLineImage from "../assets/Images/TimeLineImage.png";
+import TimeLineImage from "../assets/Images/TimelineImage.png";
 import Know_your_progress from "../assets/Images/Know_your_progress.png";
 import Plan_your_lessons from "../assets/Images/Plan_your_lessons.svg";
 import Compare_with_others from "../assets/Images/Compare_with_others.svg";
@@ -24,14 +24,12 @@ import Movercontent from '../components/Home/Movercontent.jsx';
 import { HomePageExplore } from '../assets/data/homepage-explore.jsx';
 import ErrorBoundary from './ErrorBoundary.jsx';
 
-
-
-
 const Home = () => {
 //  const [info,setinfo]=useState(HomePageExplore[0]);
   // const  [category,setcategory]=useState({
   // "Free"
   // });
+
   
   const [category,setcategory]=useState("Free");
   let filteritems=HomePageExplore.filter(prev=>prev.tag===category);
