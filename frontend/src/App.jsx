@@ -17,7 +17,7 @@ import Signup from './pages/Signup.jsx';
 import Enrolledcourse from './pages/Enrolledcourse.jsx';
 import Instructor from './pages/Instructor.jsx';
 import Editcourse from './components/Dashboard/Editcourse/Editcourse.jsx';
-import Login from './pages/login.jsx';
+import Login from './pages/Login.jsx';
 import Myprofile from './pages/Myprofile.jsx';
 import CourseDashboard from './components/Dashboard/CourseDashboard/CourseDashboard.jsx'
 import Resetpassword from './pages/Resetpassword.jsx';
