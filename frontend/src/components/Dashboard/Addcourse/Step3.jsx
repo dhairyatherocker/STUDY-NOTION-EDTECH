@@ -5,7 +5,7 @@ import { useSelector,useDispatch } from 'react-redux';
 import { publishcourse } from '../../../services/coursecaller';
 import { ImCheckboxUnchecked } from "react-icons/im";
 import { useNavigate } from 'react-router-dom';
-import { resetCourseState } from '../../../slices/courseslice';
+import { resetCourseState } from '../../../slices/Courseslice';
 import {toast} from "react-hot-toast"
 const Step3 = () => {
   // const [radio,setradio]=useState(false);
