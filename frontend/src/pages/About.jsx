@@ -3,7 +3,7 @@ import aboutus1 from "../assets/Images/aboutus1.webp"
 import aboutus2 from "../assets/Images/aboutus2.webp"
 import FoundingStory from "../assets/Images/FoundingStory.png"
 import Allreviews from '../components/reviews.jsx/Allreviews'
-import Footer from '../components/common/footer'
+import Footer from '../components/common/Footer.jsx'
 import aboutus3 from "../assets/Images/aboutus3.webp"
 const About = () => {
   return (
