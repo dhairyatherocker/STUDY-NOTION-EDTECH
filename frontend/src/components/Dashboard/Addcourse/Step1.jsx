@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import { api } from '../../../services/apis.jsx';
 import { apiconnector } from '../../../services/apiconnector.jsx';
 import Tag from './Tag.jsx';
-import { setStep,setCourse } from '../../../slices/courseslice.jsx';
+import { setStep,setCourse } from '../../../slices/Courseslice.jsx';
 import { useSelector,useDispatch } from 'react-redux';
 import { createcourse } from '../../../services/coursecaller.jsx';
 import Benefits from './Benefits.jsx';
