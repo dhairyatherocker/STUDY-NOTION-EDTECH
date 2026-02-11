@@ -2,10 +2,10 @@ import React,{useEffect,useState} from 'react'
 import { useSelector,useDispatch } from 'react-redux';
 import Nestedview from './Nestedview.jsx';
 import {toast} from "react-hot-toast"
-import { setStep } from '../../../slices/courseslice.jsx';
+import { setStep } from '../../../slices/Courseslice.jsx';
 import Modal from './Modal.jsx';
 import {useForm} from "react-hook-form"
-import { setEditCourse } from '../../../slices/courseslice.jsx';
+import { setEditCourse } from '../../../slices/Courseslice.jsx';
 import Thumbnail from './Thumbnail.jsx';
 import { getsectiondetails } from '../../../services/coursecaller.jsx';
 import { createsection,updatesection,deletesection,deletesubsection } from '../../../services/coursecaller.jsx';
