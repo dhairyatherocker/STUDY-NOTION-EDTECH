@@ -3,7 +3,7 @@ import { HiOutlineChatBubbleLeftRight } from "react-icons/hi2";
 import { HiOutlineChatAlt2 } from "react-icons/hi";
 import { FaEarthAmericas } from "react-icons/fa6";
 import { IoCall } from "react-icons/io5";
-import Footer from './common/footer';
+import Footer from "./common/Footer.jsx";
 import { country } from '../assets/data/countrycode';
 import Allreviews from './reviews.jsx/Allreviews';
 const contactus = () => {
