@@ -7,7 +7,7 @@ import boxoffice from "../assets/Images/boxoffice.png"
 import Allreviews from '../components/reviews.jsx/Allreviews.jsx';
 import Blocks from '../components/Home/Blocks';
 import Highlighttext from '../components/Home/Highlighttext';
-import Pagings from '../components/Home/pagings.jsx';
+import Pagings from '../components/Home/Pagings.jsx';
 import bghome from "../assets/Images/bghome.svg";
 import frame from "../assets/Images/frame.png";
 import Logo1 from "../assets/TimeLineLogo/Logo1.svg";
