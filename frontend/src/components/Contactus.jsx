@@ -105,7 +105,7 @@ const contactus = () => {
       >
         Send Message
       </button>
-    </div>>
+    </div>
 </form>
 </div>
 
