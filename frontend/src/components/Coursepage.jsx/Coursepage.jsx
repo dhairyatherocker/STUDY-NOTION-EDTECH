@@ -17,7 +17,7 @@ import { useLocation } from 'react-router-dom';
 import { HiComputerDesktop } from "react-icons/hi2";
 import { IoIosArrowUp } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
-import Footer from '../common/footer.jsx';
+import Footer from '../common/Footer.jsx';
 import { buyCourse } from '../../services/paymentcaller.jsx';
 const Coursepage = () => {
 const location=useLocation();
