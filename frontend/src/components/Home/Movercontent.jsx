@@ -5,10 +5,10 @@ import { IoPeopleSharp } from "react-icons/io5";
 import { ImTree } from "react-icons/im";
 import { useState } from 'react';
 import { HomePageExplore } from '../../assets/data/homepage-explore.jsx';
-import bghome from "../../assets/images/bghome.svg"
+import bghome from "../../assets/Images/bghome.svg"
 import Button from './Button.jsx';
 
-
+// C:\hp\STUDY-NOTION-EDTECH\frontend\src\assets\Images\bghome.svg
 
 const Movercontent = (props) => {
 
