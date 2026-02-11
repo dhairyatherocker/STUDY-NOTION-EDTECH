@@ -11,7 +11,7 @@ import Addcourse from './components/Dashboard/Addcourse/Addcourse.jsx';
 import Error from './pages/Error.jsx';
 import About from './pages/About.jsx'
 import Navbar from './components/Navbar.jsx';
-import Contactus from './components/contactus.jsx';
+import Contactus from './components/Contactus.jsx';
 import Coursepage from "./components/Coursepage.jsx/Coursepage.jsx"
 import Signup from './pages/Signup.jsx';
 import Enrolledcourse from './pages/Enrolledcourse.jsx';
