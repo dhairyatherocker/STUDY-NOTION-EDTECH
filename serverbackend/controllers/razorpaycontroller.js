@@ -5,7 +5,7 @@ const Razorpay=require("razorpay");
 const {otpmailer}=require("../utils/otpmailer.js");
 const  courseEnrollmentEmail=require("../mail/templates/courseEnrollmentEmail.js");
 const  paymentSuccessEmail=require("../mail/templates/paymentSuccessEmail.js")
-const {instance}=require("../config/razorpay.js");
+const {instance}=require("./config/razorpay.js");
 const crypto = require("crypto");
 require("dotenv").config();
 exports.capturepayment=async(req,res)=>{
