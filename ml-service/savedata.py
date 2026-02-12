@@ -1,8 +1,10 @@
 import requests
 import pandas as pd
-
-BASE_URL = "http://localhost:4000/api/v1/recommender"
-
+import os
+BASE_URL = "https://study-notion-edtech-backend-z172.onrender.com/api/v1/recommender"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_PATH = os.path.join(BASE_DIR, "data.csv")
+USER_PATH = os.path.join(BASE_DIR, "user-activity.csv")
 def fetch_and_save():
     # 1. Fetch courses
     print("Fetching courses...")
@@ -14,7 +16,7 @@ def fetch_and_save():
         courses = courses["data"]
 
     df_courses = pd.DataFrame(courses)
-    df_courses.to_csv(r"C:\hp\STUDY-NOTION-EDTECH\ml-service\data.csv", index=False)
+    df_courses.to_csv(DATA_PATH, index=False)
     print("courses.csv saved!")
 
     # 2. Fetch user activity
@@ -26,7 +28,7 @@ def fetch_and_save():
         activity = activity["data"]
 
     df_activity = pd.DataFrame(activity)
-    df_activity.to_csv(r"C:\hp\STUDY-NOTION-EDTECH\ml-service\user-activity.csv", index=False)
+    df_activity.to_csv(USER_PATH, index=False)
     print("user_activity.csv saved!")
 
     print("\n DATA FETCH SUCCESSFULLY DONE!")
