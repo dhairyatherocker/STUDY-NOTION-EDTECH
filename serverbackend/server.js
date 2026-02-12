@@ -14,7 +14,7 @@ const mongoose=require("mongoose");
 
 
 const dbconnect=require("./config/Database.js");
-const cloudconnect=require("./controllers/config/cloudinary.js");
+const cloudconnect=require("./config/cloudinary.js");
 const cookieParser = require('cookie-parser');
 const cors=require("cors");
 const fileUpload=require("express-fileupload");
