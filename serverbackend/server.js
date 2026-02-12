@@ -13,7 +13,7 @@ const mongoose=require("mongoose");
 // to make connection between mongodb and express
 
 
-const dbconnect=require("./controllers/config/Database.js");
+const dbconnect=require("./config/Database.js");
 const cloudconnect=require("./controllers/config/cloudinary.js");
 const cookieParser = require('cookie-parser');
 const cors=require("cors");
