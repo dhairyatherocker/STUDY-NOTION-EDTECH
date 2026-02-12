@@ -30,7 +30,7 @@ app.use(cookieParser());
 
 app.use(
     cors({
-        origin:"https://https://study-notion-edtech-six.vercel.app",
+        origin:"https://study-notion-edtech-six.vercel.app",
         credentials:true,
     })
 )
