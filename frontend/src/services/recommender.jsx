@@ -40,10 +40,10 @@ setLoading(true);
 const toastId=toast.loading("Loading...");
      try{
      const response = await apiconnector('PUT',RECOMMENDEDCOURSE,{token,courseId});
-     
+      console.log("response on recommended course",response);
     if(!response.data.success){
     throw new Error(response.data.message);}
-    console.log("response on recommended course",response.data);
+   
 //     setparticularId(response.data.data.recommendations);
   toast.dismiss(toastId);
 setLoading(false);
