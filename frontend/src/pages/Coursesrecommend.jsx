@@ -21,7 +21,7 @@ const Coursesrecommend = () => {
         const lastId = ids[ids.length - 1];
         const recIds = await getrecommendedcourse(token, lastId);
         console.log("rcommended course iDS",recIds);
-        setRecommendedIds(recIds.data.data.recommendations); 
+        setRecommendedIds(recIds?.data?.dat?.recommendations || []); 
       }
     } catch (error) {
       console.log(error);
