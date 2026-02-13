@@ -167,8 +167,9 @@ const mlResponse = await axios.get(
 
 console.log("recommend3");
 
-  const recommendations = mlResponse.data;
-  // conosle.log(recommendations);
+  // const recommendations = mlResponse.data;
+  const recommendations = mlResponse;
+  conosle.log("all recommendations",recommendations);
 console.log("recommend4");
 
     return res.status(200).json({
