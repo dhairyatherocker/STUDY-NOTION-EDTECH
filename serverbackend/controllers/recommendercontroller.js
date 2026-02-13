@@ -169,7 +169,7 @@ console.log("recommend3");
 
   // const recommendations = mlResponse.data;
   const recommendations = mlResponse;
-  conosle.log("all recommendations",recommendations);
+  conosle.log("all recommendations in controllers",recommendations);
 console.log("recommend4");
 
     return res.status(200).json({
